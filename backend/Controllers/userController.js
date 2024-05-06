@@ -64,7 +64,7 @@ export const getUserProfile = async (req, res) => {
         if (!user) {
             return res.status(404).json({ success: false, message: 'User not found' });
         }
-        const {password, ...reset} = user_doc
+        const {password, ...rest} = user_doc
         res.status(200).json({ success: true, message: 'Profile info is getting', data: {...rest} });
     } catch (err) {
         res.status(500).json({ success: false, message: "Something went wrong, cannot get" });
@@ -78,6 +78,6 @@ export const getMyAppointments = async (req, res) => {
         const doctors = await Doctor.find({ _id: { $in: doctorIds } }).select('-password');
         res.status(200).json({ success: true, message: 'Appointments are getting', data: doctors });
     } catch (err) {
-        res.status(500).json({ success: false, message: "Something went wrong, cannot gey" });
+        res.status(500).json({ success: false, message: "Something went wrong, cannot get" });
     }
 };
