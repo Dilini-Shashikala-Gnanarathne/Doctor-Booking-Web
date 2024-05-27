@@ -3,8 +3,10 @@ import Doctor from "../models/Doctorschema.js";
 import User from "../models/UserSchema.js";
 
 export const authenticate = async (req, res, next) => {
+    //get token from header
     const authToken = req.headers.authorization;
 
+    // check token exist or not
     if (!authToken || !authToken.startsWith("Bearer")){
         return res
         .status(401)
@@ -18,7 +20,7 @@ export const authenticate = async (req, res, next) => {
 
         req.userId = decoded.id
         req.role = decoded.role
-        next();
+        next();//must be call this
     }catch(err){
         if(err.name =='TokenExpiredError'){
             return res.status(401).json({message: "Token is expired"});

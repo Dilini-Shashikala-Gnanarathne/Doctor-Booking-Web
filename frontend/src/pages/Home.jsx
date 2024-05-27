@@ -33,10 +33,6 @@ const Home = () => {
                   md:leading-[70px]'>
                      We help patients live a healthy, longer life
                      </h1>
-                     <p className='text__para'>Think about a software upgrade for an inventory management system.
-                       With Parallel Simulation, you'd run both the old and new versions at the same time, processing the same transactions to see if everything adds up.
-                     </p>
-
                      <button className='btn'>Request an Appointment</button>
                 </div>
         {/*========= hero counter ========== */}

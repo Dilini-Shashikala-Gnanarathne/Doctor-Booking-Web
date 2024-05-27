@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { formateDate } from '../../utils/formateDate'
 import {AiFillStar} from 'react-icons/ai'
 import avatar from '../../assets/images/avatar-icon.png'
+import FeedbackForm from './FeedbackForm'
 const Feedback = () => {
   const [showFeedbackForm,setshowFeedbackForm]=useState(false);
   return (
@@ -33,8 +34,13 @@ const Feedback = () => {
           ))}
         </div>
       </div>
-      </div> 
-      <div></div>
+      </div>
+
+     {!showFeedbackForm && (<div className="text-center">
+      <button className='btn' onClick={()=>setshowFeedbackForm(true)}>Give Feedback</button>
+     </div>
+     )}
+     <FeedbackForm/>
     </div>
   )
 }

@@ -11,9 +11,6 @@ router.use("/:doctorId/reviews", reviewRouter);
 // Get single doctor by ID
 router.get('/:id', getSingleDoctor);
 
-// // Get doctor profile
-// router.get('/profile/me', authenticate, restrict(['doctor']), getDoctorProfile);
-
 // // Get all doctors
 
 router.get('/', getAllDoctor);
@@ -23,6 +20,11 @@ router.get('/', getAllDoctor);
 
 // // Delete doctor by ID
  router.delete('/:id', authenticate, restrict(["doctor"]), deleteDoctor);
+
+
+ 
+// Get doctor profile
+router.get('/profile/me', authenticate, restrict(['doctor']), getDoctorProfile);
 
 export default router;
 

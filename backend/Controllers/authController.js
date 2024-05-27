@@ -4,8 +4,8 @@ import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 
 const generateToken = user=>{
-    return jwt.sign({id:user._id, role:user.role}, process.env.JWT_SECRET_key,{
-        expiresIn: '15d'
+    return jwt.sign({id:user._id, role:user.role}, process.env.JWT_SECRET_KEY,{
+        expiresIn: '15d' // this for authentication expire
     })
 }
 
