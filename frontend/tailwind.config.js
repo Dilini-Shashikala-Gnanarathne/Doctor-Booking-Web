@@ -5,9 +5,9 @@ export default {
     extend: {
       colors: {
         primaryColor: "#008000",
-        yellowColor: "#FEB60D",
+        yellowColor: "#04e474",
         purpleColor: "#9771FF",
-        irisBlueColor: "#01B5C5",
+        irisBlueColor: "#90EE90",
         headingColor: "#181A1E",
         textColor: "#4E545F",
       },
