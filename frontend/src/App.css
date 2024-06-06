@@ -54,3 +54,64 @@ box-shadow: 3px 3px -8px 3px #ddd;
 .menubar{
 
 }
+
+
+#slider {
+  overflow: hidden;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0; /* Changed from 20 to 0 to avoid unexpected margin */
+  animation: 12s slider infinite;
+}
+
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+.slid {
+  width: 500px;
+  margin-left: 0px;
+  height: 300px;
+  padding-top: 100px;
+  padding-bottom: 500px;
+  background-color: transparent;
+}
+.row{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between ;
+  background-color: transparent;
+}
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}

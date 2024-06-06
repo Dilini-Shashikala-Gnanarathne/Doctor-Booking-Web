@@ -1,7 +1,9 @@
-import React from 'react'
-import heroImg01 from "../assets/images/hero-img01.png";
-import heroImg02 from "../assets/images/hero-img02.png"; 
-import heroImg03 from "../assets/images/hero-img03.png";
+import React, { useEffect, useRef } from 'react';
+import '../App.css';
+import heroImg011 from "../assets/images/hero-img011.jpg";
+import heroImg031 from "../assets/images/hero-img031.jpg";
+import heroImg041 from "../assets/images/hero-img041.jpg";
+import heroImg051 from "../assets/images/hero-img051.jpg";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
@@ -18,6 +20,28 @@ import FaqList from '../components/Faq/FaqList';
 import Testimonial from '../components/Testimonial/Testimonial';
 
 const Home = () => {
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    const sliderAnimation = slider.animate(
+      [
+        { transform: 'translateX(0)' },
+        { transform: 'translateX(-10%)' },
+        { transform: 'translateX(-10%)' },
+        { transform: 'translateX(-10%)' },
+
+        { transform: 'translateX(0)' },
+      ],
+      {
+        duration: 120000,
+        iterations: Infinity,
+      }
+    );
+    return () => {
+      sliderAnimation.cancel();
+    };
+  }, []);
   return <>
    
    {/*========= hero section========= */}
@@ -64,15 +88,20 @@ const Home = () => {
             </div>
 
              {/* ======== hero content ========= */}
-             <div className='flex gap-[30px] justify-end'>
-                <div>
-                  <img className='w-full' src={heroImg01} alt=''/>
-                </div>
-                <div className='mt-[30px]'>
-                  <img className='w-full mb-[30px]' src={heroImg02} alt=''/>
-                  <img className='w-full' src={heroImg03} alt=''/>
-                </div>
-             </div>
+             <div className="row">
+      <div className="slid">
+        <div id="slider">
+          <figure ref={sliderRef}>
+            <img src={heroImg011} alt="Slide 1" />
+            <img src={heroImg031} alt="Slide 2" />
+            <img src={heroImg041} alt="Slide 3" />
+            <img src={heroImg051} alt="Slide 4" />
+            <img src={heroImg011} alt="Slide 5" />
+
+          </figure>
+        </div>
+      </div>
+    </div>
              
         </div>
       </div>
