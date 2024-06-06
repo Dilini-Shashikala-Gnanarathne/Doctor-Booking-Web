@@ -65,12 +65,12 @@ const Signup = () => {
 
   return (
     <section className='px-5 xl:px-0'>
-      <div className="max-w-[1170px] mx-auto">
+      <div className="max-w-[1100px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Image box */}
-          <div className="hidden lg:block bg-primaryColor rounded-l-lg">
-            <figure className='rounded-l-lg'>
-              <img src={signupImg} alt='Signup' className='w-full rounded-l-lg' />
+          <div className="hidden lg:block bg-primaryColor h-60 rounded-l-lg">
+            <figure className='rounded-l-lg '>
+              <img src={signupImg} alt='Signup' className='w-full h-full rounded-l-lg' />
             </figure>
           </div>
           {/* Sign up form */}
