@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import signupImg from '../assets/images/Signup.gif';
+
+import signupImg from '../assets/images/signup.gif';
 import { Link, useNavigate } from 'react-router-dom';
 import uploadImageToCloudinary from '../utils/uploadCloudinary.js';
 import { BASE_URL } from '../config';

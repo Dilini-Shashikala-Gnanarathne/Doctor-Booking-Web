@@ -52,7 +52,7 @@ const Dashboard = () => {
                               </figure>
                               <div>
                                  <span className="bg-[#CCF0F3] text-irisBlueColor py-1 px-6 lg:py-2 lg:px-6 text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded">
-                                    Surgeon
+                                    {data.specialization}
                                  </span>
                                  <h3 className="text-headingColor text-[22px] leading-9 mt-3 font-bold">
                                     {data.name}
@@ -60,14 +60,14 @@ const Dashboard = () => {
                                  <div className="flex items-center gap-[6px]">
                                     <span className="flex items-center gap-[6px] text-[14px] leading-5 lg:text-[16px] lg:leading-7 font-semibold text-headingColor">
                                        <img src={startIcon} alt="" />
-                                       4.8
+                                       {data.averageRating}
                                     </span>
                                     <span className="text-[14px] leading-5 lg:text-[16px] lg:leading-7 font-[400] text-textColor">
-                                       (272)
+                                       ({data.totalRating})
                                     </span>
                                  </div>
                                  <p className="text__para font-[15px] lg:max-w-[300px] leading-6">
-                                    Doctor bio
+                                    {data?.bio}
                                  </p>
                                  <DoctorAbout
                                     name={data.name}
@@ -79,7 +79,7 @@ const Dashboard = () => {
                            </div>
                         )}
                         {tab === 'appointments' && <div>Appointments Content</div>}
-                        {tab === 'settings' && <Profile/>}
+                        {tab === 'settings' && <Profile doctorData={data}/>}
                      </div>
                   </div>
                </div>
