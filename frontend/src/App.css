@@ -119,11 +119,11 @@ box-shadow: 3px 3px -8px 3px #ddd;
 
 /* Basic styling for the header */
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
-  background: white;
+  background: transparent;
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -202,4 +202,9 @@ box-shadow: 3px 3px -8px 3px #ddd;
     flex-direction: column;
     gap: 2rem;
   }
+}
+
+
+.divs{
+  background-color: red;
 }
