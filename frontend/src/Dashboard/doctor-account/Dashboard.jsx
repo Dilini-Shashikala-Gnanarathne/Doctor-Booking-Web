@@ -78,7 +78,7 @@ const Dashboard = () => {
                               </div>
                            </div>
                         )}
-                        {tab === 'appointments' && <div>Appointments Content</div>}
+                        {tab === 'appointments' && <div className="mt-5 text-center text-headingColor leading-7 text-[20px] font-semibold text-primaryColor">You have not Appointment </div>}
                         {tab === 'settings' && <Profile doctorData={data}/>}
                      </div>
                   </div>
